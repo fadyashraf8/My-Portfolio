@@ -1,0 +1,23 @@
+.img1 {
+    position: absolute;
+    width   : 75%;
+    top     : 100px;
+    left    : 20px;
+    z-index: 2;
+}
+
+.img2 {
+    position: absolute;
+    width   : 90%;
+    top     : -40px;
+    right   : -100px;
+}
+
+@media screen and (max-width:640px){
+    .img1,.img2 {
+    display: none;
+    }
+    
+  
+ 
+}
