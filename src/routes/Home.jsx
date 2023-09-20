@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../component/Navbar'
-import BackgroundImg from '../component/BackgroundImg.js'
-import Footer from '../component/Footer.js'
+import BackgroundImg from '../component/BackgroundImg.jsx'
+import Footer from '../component/Footer.jsx'
 
 
 
