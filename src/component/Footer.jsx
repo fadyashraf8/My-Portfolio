@@ -15,7 +15,7 @@ const Footer = () => {
                                 <i class="fa-solid fa-house fa-1x text-white"></i>
                             </div>
                             <div className='col-md-3 '>
-                                <p>10 Fekry Tawfik  Shubra,Cairo</p>
+                                <p>Cairo, Egypt</p>
                             </div>
                         </div>
                         <div className='row my-3'>
@@ -42,14 +42,10 @@ const Footer = () => {
                                 <h1 className=' text-white'>About Me</h1>
                                 <p>My name is Fady Ashraf.
                                     <br />
-                                    I am a Web developer with experience in
-                                    React.js, Node.js, Redux.js and JavaScript,
-                                    but my skills are not limited to these. I'm
-                                    also skilled in HTML, CSS, Bootstrap.
-                                    Beside these skills I'm good at MongoDB,
-                                    API, AJAX... Being a curious developer,
-                                    I'm constantly expanding my skill set and
-                                    learning something new.
+                                   ITI MERN Graduate and MERN Stack Developer experienced in building production-level web applications using
+React.js, Node.js, and MongoDB. Skilled in developing scalable web solutions, integrating RESTful APIs, and
+optimizing application performance. Strong focus on clean architecture, reusable components, and real-world
+product delivery.
                                 </p>
                             </div>
                         </div>
@@ -64,11 +60,7 @@ const Footer = () => {
 
                                 </a>
                             </div>
-                            <div className='col-md-1  d-flex justify-content-end '>
-                                <a href='https://www.facebook.com/fady.ashraf.923?mibextid=LQQJ4d' target='_blank'>
-                                    <i class="fa-brands fa-facebook fa-2x text-white"></i>
-                                </a>
-                            </div>
+                         
                         </div>
 
 
