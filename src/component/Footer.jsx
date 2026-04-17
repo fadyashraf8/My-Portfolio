@@ -52,10 +52,10 @@ product delivery.
                         <div className='row'>
 
                             <div className='col-md-1  d-flex justify-content-end '>
-                                <a href='https://www.linkedin.com/in/fady-ashraf-2867b3279/' target='_blank'> <i class="fa-brands fa-linkedin fa-2x text-white"></i></a>
+                                <a href='https://www.linkedin.com/in/fady-ashraf-2867b3279/' target='_blank' rel='noreferrer'> <i class="fa-brands fa-linkedin fa-2x text-white"></i></a>
                             </div>
                             <div className='col-md-1  d-flex justify-content-end '>
-                                <a href='https://github.com/fadyashraf8' target='_blank'>
+                                <a href='https://github.com/fadyashraf8' target='_blank' rel='noreferrer'>
                                     <i class="fa-brands fa-github fa-2x text-white"></i>
 
                                 </a>

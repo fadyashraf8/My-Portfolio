@@ -27,10 +27,10 @@ const AboutContent = () => {
                         <div className='col-md-6'>
                             <div className='row position-relative'>
                                 <div className='col-md-12'>
-                                    <img src={react1} className=' img1'/>
+                                    <img src={react1} className=' img1' alt="React development" />
                                 </div>
                                 <div className='col-md-12'>
-                                <img src={react2} className=' img2'/>
+                                    <img src={react2} className=' img2' alt="React coding" />
                                 </div>
                             </div>
                         </div>
