@@ -1,45 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
-* {
-  box-sizing : border-box;
-  margin     : 0;
-  padding    : 0;
-  font-family: 'Outfit', sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  background: #000;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply font-body antialiased transition-colors duration-300;
+    font-size: 16px;
+  }
 
-h1,
-h4,
-p,
-a {
-  color          : #fff;
-  text-decoration: none;
-}
+  ::selection {
+    @apply bg-theme-accent-light text-theme-bg-light dark:bg-theme-accent-dark dark:text-theme-bg-dark;
+  }
 
-ul{
-  list-style-type: none;
-}
-
-.button{
-  padding: 12px 32px;
-  font-size: 1rem;
-  text-transform: uppercase;
-  background: rgb(248, 217,15 );
-  color: #222;
-  border: 1px solid #fff;
-  font-weight: 600;
-  cursor: pointer;
- border-radius: 12px;
-}
-.button-light{
-  background: transparent;
-  color: #fff;
-}
-.button:hover{
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  transition: 0.3s;
+  /* Custom Slim Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-theme-bg-light dark:bg-theme-bg-dark;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-theme-border-light dark:bg-theme-border-dark rounded-full hover:bg-theme-accent-light dark:hover:bg-theme-accent-dark transition-colors;
+  }
 }
 
+@layer utilities {
+  /* Text outline effect for that high-end typographic feel */
+  .text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+  
+  /* Magnetic hover style helper */
+  .magnetic-transition {
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  /* Grid background for subtle premium texture */
+  .grid-bg {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(120, 120, 120, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(120, 120, 120, 0.05) 1px, transparent 1px);
+  }
+
+  .grid-bg-dark {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+}
+
+/* Custom Cursor Glow */
+.cursor-glow {
+  pointer-events: none;
+  background: radial-gradient(circle 120px at var(--x, 0px) var(--y, 0px), rgba(229, 75, 39, 0.15), transparent 80%);
+}
+
+.dark .cursor-glow {
+  background: radial-gradient(circle 150px at var(--x, 0px) var(--y, 0px), rgba(255, 91, 55, 0.08), transparent 80%);
+}
