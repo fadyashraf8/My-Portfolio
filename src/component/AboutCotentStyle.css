@@ -1,21 +1,176 @@
-.img1 {
-    position: absolute;
-    width   : 75%;
-    top     : 100px;
-    left    : 20px;
+.about-section {
+    padding: 4rem 0;
+    position: relative;
     z-index: 2;
 }
 
-.img2 {
-    position: absolute;
-    width   : 90%;
-    top     : -40px;
-    right   : -100px;
+.about-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
-@media screen and (max-width:640px){
-    .img1,.img2 {
-    display: none;
+/* Glassmorphic Bento Cards */
+.bento-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 1.75rem;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.bento-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Card layout spans */
+.bio-card {
+    grid-column: span 2;
+}
+
+.stats-card {
+    grid-column: span 1;
+}
+
+.skills-card {
+    grid-column: span 2;
+}
+
+.education-card {
+    grid-column: span 1;
+}
+
+/* Bio Card styling */
+.bio-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+}
+
+.bio-card p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Stats Card */
+.stats-card h3 {
+    font-size: 1.3rem;
+}
+
+.passions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+}
+
+.passions-list li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-card h3 {
+    font-size: 1.3rem;
+}
+
+.section-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+}
+
+.skill-badge-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+}
+
+.skill-badge-wrapper:hover {
+    border-color: var(--skill-color);
+}
+
+.skill-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--skill-color);
+}
+
+.skill-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Education Card */
+.education-card h3 {
+    font-size: 1.3rem;
+}
+
+.education-content {
+    margin-top: 0.1rem;
+    flex-grow: 1;
+}
+
+.degree-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.school-name {
+    font-size: 0.88rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 2px 0 6px;
+}
+
+.education-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.about-cta-container {
+    margin-top: 0.5rem;
+}
+
+.about-cta-container a {
+    width: 100%;
+}
+
+/* Bento Grid Responsive stacking */
+@media screen and (max-width: 900px) {
+    .about-bento-grid {
+        grid-template-columns: 1fr;
     }
     
+    .bio-card, .stats-card, .skills-card, .education-card {
+        grid-column: span 1;
+    }
+    
+    .bento-card {
+        padding: 1.5rem;
+    }
 }

@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Bootstrap Exam",
+    "description": "A multi-page website built with HTML, CSS, and Bootstrap to practice responsive design.",
+    "liveUrl": "https://fadyashraf8.github.io/Bootstrap-Exam/",
+    "githubUrl": "https://github.com/fadyashraf8/Bootstrap-Exam",
+    "tags": ["HTML", "CSS", "Bootstrap", "Responsive"],
+    "accentColor": "#6366f1",
+    "mockupImage": ""
+  },
+  {
+    "title": "Dom Example Website",
+    "description": "A simple website to practice DOM manipulation and event handlers in vanilla JavaScript.",
+    "liveUrl": "https://fadyashraf8.github.io/Dom-Example-Website/",
+    "githubUrl": "https://github.com/fadyashraf8/Dom-Example-Website",
+    "tags": ["HTML", "CSS", "JavaScript", "DOM-API"],
+    "accentColor": "#14b8a6",
+    "mockupImage": ""
+  },
+  {
+    "title": "Random Quote Website",
+    "description": "Fetches random quotes from an external API and allows sharing them on Twitter.",
+    "liveUrl": "https://fadyashraf8.github.io/Random-quote-website/",
+    "githubUrl": "https://github.com/fadyashraf8/Random-quote-website",
+    "tags": ["JavaScript", "REST-API", "CSS-Grid"],
+    "accentColor": "#ec4899",
+    "mockupImage": ""
+  },
+  {
+    "title": "Crud System",
+    "description": "A system to add, update, delete, and search products, storing data in Local Storage.",
+    "liveUrl": "https://fadyashraf8.github.io/Crud-System/",
+    "githubUrl": "https://github.com/fadyashraf8/Crud-System",
+    "tags": ["JavaScript", "Local-Storage", "CRUD", "CSS"],
+    "accentColor": "#10b981",
+    "mockupImage": ""
+  },
+  {
+    "title": "Login & Registration",
+    "description": "A registration and login system with client-side form validation.",
+    "liveUrl": "https://fadyashraf8.github.io/Login-and-Registration-Website/",
+    "githubUrl": "https://github.com/fadyashraf8/Login-and-Registration-Website",
+    "tags": ["JavaScript", "Validation", "Local-Storage"],
+    "accentColor": "#ef4444",
+    "mockupImage": ""
+  },
+  {
+    "title": "Weather Website",
+    "description": "Uses a weather API to display current weather forecasts for different cities.",
+    "liveUrl": "https://fadyashraf8.github.io/Weather-Website/",
+    "githubUrl": "https://github.com/fadyashraf8/Weather-Website",
+    "tags": ["JavaScript", "Weather-API", "Geolocation"],
+    "accentColor": "#0ea5e9",
+    "mockupImage": ""
+  },
+  {
+    "title": "Yummy Website",
+    "description": "A food recipe website where users can search for meals and filter them by category.",
+    "liveUrl": "https://fadyashraf8.github.io/Yummy-Website/",
+    "githubUrl": "https://github.com/fadyashraf8/Yummy-Website",
+    "tags": ["JavaScript", "Recipe-API", "Interactive-UI"],
+    "accentColor": "#f97316",
+    "mockupImage": ""
+  },
+  {
+    "title": "Bookmark Website",
+    "description": "A utility to bookmark your favorite website URLs with search functionality.",
+    "liveUrl": "https://fadyashraf8.github.io/Bookmark-Website/",
+    "githubUrl": "https://github.com/fadyashraf8/Bookmark-Website",
+    "tags": ["JavaScript", "Bookmark-API", "CSS-Flex"],
+    "accentColor": "#8b5cf6",
+    "mockupImage": ""
+  },
+  {
+    "title": "Movies Website",
+    "description": "A React movie application that displays trending films using a movie API.",
+    "liveUrl": "https://fadyashraf8.github.io/Movies/#/login",
+    "githubUrl": "https://github.com/fadyashraf8/Movies",
+    "tags": ["React", "Movie-DB-API", "Routing"],
+    "accentColor": "#e11d48",
+    "mockupImage": ""
+  },
+  {
+    "title": "Game Over Website",
+    "description": "A React application showcasing free-to-play MMO games, built with custom hooks.",
+    "liveUrl": "https://fadyashraf8.github.io/Game-Over/#/login",
+    "githubUrl": "https://github.com/fadyashraf8/Game-Over",
+    "tags": ["React", "Games-API", "Custom-Hooks"],
+    "accentColor": "#3b82f6",
+    "mockupImage": ""
+  }
+]

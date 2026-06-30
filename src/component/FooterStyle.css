@@ -1,3 +1,109 @@
-.footer{
-    background-color: rgba(19, 19, 19, 0.8);
+.footer {
+    background: rgba(3, 7, 18, 0.6);
+    border-top: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 5rem 0 2rem;
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer h3 {
+    font-size: 1.25rem;
+    font-family: 'Syne', sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-contact-item svg {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.footer-contact-item p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.footer-bio {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    transition: var(--transition-smooth);
+}
+
+.footer-socials a:hover {
+    color: var(--text-primary);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-glow);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsiveness overrides */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 4rem 0 2rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .footer h3 {
+        margin-bottom: 1rem;
+    }
 }

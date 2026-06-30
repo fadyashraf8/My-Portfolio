@@ -1,158 +1,94 @@
+import React, { useState, useEffect } from 'react'
 import './WorkCardStyle.css'
-
-
-import React from 'react'
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
+import projectsData from '../data/projects.json'
 
 const WorkCard = () => {
+    const [projects, setProjects] = useState([])
+
+    useEffect(() => {
+        setProjects(projectsData)
+    }, [])
+
     return (
-        <>
-            <div className='container '>
-                <div className='row my-5 g-3'>
-                  
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Bootstrap Exam</h5>
-                                <a href="https://fadyashraf8.github.io/Bootstrap-Exam/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Bootstrap-Exam"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
+        <section className='projects-section'>
+            <div className='container'>
+                <div className='projects-grid'>
+                    {projects.map((project, index) => (
+                        <div 
+                            key={index} 
+                            className='project-card-wrapper' 
+                            style={{ '--project-accent': project.accentColor }}
+                        >
+                            <div className='mac-browser-card'>
+                                {/* Browser Header */}
+                                <div className='browser-header'>
+                                    <div className='browser-dots'>
+                                        <span className='dot dot-red'></span>
+                                        <span className='dot dot-yellow'></span>
+                                        <span className='dot dot-green'></span>
+                                    </div>
+                                    <div className='browser-address-bar'>
+                                        {project.liveUrl.replace('https://', '')}
+                                    </div>
+                                </div>
+                                {/* Screen display (Mockup or Placeholder) */}
+                                <div className='browser-screen'>
+                                    {project.mockupImage ? (
+                                        <>
+                                            <img 
+                                                src={project.mockupImage} 
+                                                alt={`${project.title} Preview`} 
+                                                className='screenshot-img' 
+                                            />
+                                            <div className='screen-overlay'>
+                                                <span className='view-text'>Hover to scroll</span>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className='screen-placeholder'>
+                                            <span className='placeholder-icon'>📁</span>
+                                            <span className='placeholder-text'>Click Live Demo to view</span>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                            
+                            {/* Project Meta */}
+                            <div className='project-info'>
+                                <h3 className='project-title'>{project.title}</h3>
+                                <p className='project-desc'>{project.description}</p>
+                                <div className='project-tags'>
+                                    {project.tags.map((tag, tagIndex) => (
+                                        <span key={tagIndex} className='tag-pill'>
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                <div className='project-links'>
+                                    <a 
+                                        href={project.liveUrl} 
+                                        target='_blank' 
+                                        rel='noreferrer' 
+                                        className='btn-action btn-primary'
+                                    >
+                                        Live Demo <FaExternalLinkAlt />
+                                    </a>
+                                    <a 
+                                        href={project.githubUrl} 
+                                        target='_blank' 
+                                        rel='noreferrer' 
+                                        className='btn-action btn-secondary'
+                                    >
+                                        Source <FaGithub />
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Dom Example Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Dom-Example-Website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Dom-Example-Website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Random quote website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Random-quote-website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Random-quote-website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Crud System</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Crud-System/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Crud-System"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Login and Registration Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Login-and-Registration-Website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Login-and-Registration-Website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Weather Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Weather-Website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Weather-Website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Yummy Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Yummy-Website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Yummy-Website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Bookmark Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Bookmark-Website/"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Bookmark-Website"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Movies Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Movies/#/login"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Movies"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div class="card bg-dark" >
-                            <div class="card-body ">
-                                <h5 class="card-title text-white">Game Over Website</h5>
-                          
-                                <a href="https://fadyashraf8.github.io/Game-Over/#/login"
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">
-                                View Website
-                                </a>
-                                <a href="https://github.com/fadyashraf8/Game-Over"  
-                                target='_blank' rel='noreferrer' class="card-link btn btn-danger">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                  
+                    ))}
                 </div>
             </div>
-
-        </>
+        </section>
     )
 }
 

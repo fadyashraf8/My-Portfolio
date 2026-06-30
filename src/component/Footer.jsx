@@ -1,80 +1,46 @@
-
 import React from 'react'
 import './FooterStyle.css'
-
+import { FaHome, FaPhone, FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <div className='footer '>
-            <div className='container'>
-                <div className='row'>
-
-                    <div className='col-md-6 my-5'>
-                        <div className='row my-3'>
-                            <div className='col-md-2  d-flex justify-content-end '>
-                                <i class="fa-solid fa-house fa-1x text-white"></i>
-                            </div>
-                            <div className='col-md-3 '>
-                                <p>Cairo, Egypt</p>
-                            </div>
-                        </div>
-                        <div className='row my-3'>
-                            <div className='col-md-2  d-flex justify-content-end '>
-                                <i class="fa-solid fa-phone fa-1x text-white"></i>
-                            </div>
-                            <div className='col-md-3'>
-                                <p>01279673566</p>
-                            </div>
-                        </div>
-                        <div className='row my-4'>
-                            <div className='col-md-2  d-flex justify-content-end '>
-                                <i class="fa-solid fa-inbox fa-1x text-white"></i>
-                            </div>
-                            <div className='col-md-3 '>
-                                <p>fadyashraf909@gmail.com</p>
-                            </div>
-                        </div>
+        <footer className='footer'>
+            <div className='container footer-grid'>
+                <div className='footer-left'>
+                    <h3>Get In Touch</h3>
+                    <div className='footer-contact-item'>
+                        <FaHome />
+                        <p>Cairo, Egypt</p>
                     </div>
-                    <div className='col-md-6 my-5'>
-                        <div className='row'>
-
-                            <div className='col-md-12 '>
-                                <h1 className=' text-white'>About Me</h1>
-                                <p>My name is Fady Ashraf.
-                                    <br />
-                                   ITI MERN Graduate and MERN Stack Developer experienced in building production-level web applications using
-React.js, Node.js, and MongoDB. Skilled in developing scalable web solutions, integrating RESTful APIs, and
-optimizing application performance. Strong focus on clean architecture, reusable components, and real-world
-product delivery.
-                                </p>
-                            </div>
-                        </div>
-                        <div className='row'>
-
-                            <div className='col-md-1  d-flex justify-content-end '>
-                                <a href='https://www.linkedin.com/in/fady-ashraf-2867b3279/' target='_blank' rel='noreferrer'> <i class="fa-brands fa-linkedin fa-2x text-white"></i></a>
-                            </div>
-                            <div className='col-md-1  d-flex justify-content-end '>
-                                <a href='https://github.com/fadyashraf8' target='_blank' rel='noreferrer'>
-                                    <i class="fa-brands fa-github fa-2x text-white"></i>
-
-                                </a>
-                            </div>
-                         
-                        </div>
-
-
+                    <div className='footer-contact-item'>
+                        <FaPhone />
+                        <p>01279673566</p>
+                    </div>
+                    <div className='footer-contact-item'>
+                        <FaEnvelope />
+                        <p>fadyashraf909@gmail.com</p>
+                    </div>
+                </div>
+                <div className='footer-right'>
+                    <h3>About Me</h3>
+                    <p className='footer-bio'>
+                        I am Fady Ashraf, a MERN Stack Developer experienced in building scalable, production-level web applications using React.js, Node.js, and MongoDB. Focused on clean architecture, reusable components, and polished user interfaces.
+                    </p>
+                    <div className='footer-socials'>
+                        <a href='https://www.linkedin.com/in/fady-ashraf-2867b3279/' target='_blank' rel='noreferrer'>
+                            <FaLinkedin />
+                        </a>
+                        <a href='https://github.com/fadyashraf8' target='_blank' rel='noreferrer'>
+                            <FaGithub />
+                        </a>
                     </div>
                 </div>
             </div>
-
-
-        </div>
+            <div className='footer-bottom'>
+                <p>&copy; {new Date().getFullYear()} Fady Ashraf. All rights reserved.</p>
+            </div>
+        </footer>
     )
 }
 
 export default Footer
-
-
-
-
